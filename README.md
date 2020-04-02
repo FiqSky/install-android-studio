@@ -3,12 +3,12 @@
 - JDK (Java Development Kit)
 - Android Studio
 
-| Windows                                                                                                        | Mac                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| Microsoft® Windows® 7/8/10 (32- or 64-bit)                                                                     | Mac® OS X® 10.10 (Yosemite) or newer, up to 10.13 (macOS High Sierra)                                      |
-| Minimum RAM of 3GB, recommended RAM of 8GB; Add 1 GB for Android Emulator or use your phone to run project     | Minimum RAM of 3GB, recommended RAM of 8GB; Add 1 GB for Android Emulator or use your phone to run project |
-| The minimum available disk space is 2GB,                                                                       | The minimum available disk space is 2GB,                                                                   |
-| 4GB recommended (500MB for IDE + 1.5GB for Android SDK and image system emulator)                              | 4GB recommended (500MB for IDE + 1.5GB for Android SDK and image system emulator)                          |
+| Windows        | Mac             |
+| ---------------|-----------------|
+| Microsoft® Windows® 7/8/10 (32- or 64-bit)| Mac® OS X® 10.10 (Yosemite) or newer, up to 10.13 (macOS High Sierra)|
+| Minimum RAM of 3GB, recommended RAM of 8GB; Add 1 GB for Android Emulator or use your phone to run project| Minimum RAM of 3GB, recommended RAM of 8GB; Add 1 GB for Android Emulator or use your phone to run project|
+| The minimum available disk space is 2GB,| The minimum available disk space is 2GB,|
+| 4GB recommended (500MB for IDE + 1.5GB for Android SDK and image system emulator)| 4GB recommended (500MB for IDE + 1.5GB for Android SDK and image system emulator)|
 
 ### Step 1: Download the JDK
 You can download the JDK for free [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
