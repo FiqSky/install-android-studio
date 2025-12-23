@@ -1,54 +1,133 @@
-# Install Android Studio
+# 🚀 Install Android Studio
 
-## Required
+Panduan ini menjelaskan cara menyiapkan Android Studio versi terbaru untuk pengembangan aplikasi Android pada Windows dan macOS.
 
-- JDK (Java Development Kit)
-- Android Studio
+> **Catatan:**  
+> Android Studio versi terbaru sudah menyertakan JDK bawaan, sehingga instalasi JDK terpisah **tidak wajib** untuk sebagian besar kebutuhan.
 
-| Windows                                    | Mac                                      |
-| ------------------------------------------ | ---------------------------------------- |
-| Microsoft® Windows® 10 (64-bit) or newer  | macOS 10.15 (Catalina) or newer          |
-| Minimum RAM of 4GB, recommended RAM of 8GB; Add 2 GB for Android Emulator or use your phone to run the project | Minimum RAM of 4GB, recommended RAM of 8GB; Add 2 GB for Android Emulator or use your phone to run the project |
-| Minimum available disk space of 8GB        | Minimum available disk space of 8GB       |
-| 8GB recommended (1GB for IDE + 3GB for Android SDK and system image emulator) | 8GB recommended (1GB for IDE + 3GB for Android SDK and system image emulator) |
+---
 
-## Step 1: Download the JDK
+## 📋 System Requirements
 
-You can download the JDK for free from [Oracle's website](https://www.oracle.com/java/technologies/javase-jdk-downloads.html).
+### Supported Operating Systems
 
-1. Click the **Download** button under the JDK for the latest Java SE version.
-2. Accept the License Agreement.
-3. Choose the JDK for your operating system.
+| Windows | macOS |
+|--------|------|
+| Windows 10 (64-bit) atau lebih baru | macOS 10.15 (Catalina) atau lebih baru |
 
-## Step 2: Install the JDK (for Mac)
+### Hardware Requirements
 
-1. From either the **Downloads** window of the browser or from the file browser, double-click the `.dmg` file to launch the install file.
-2. A **Finder** window appears with an icon of an open box and the name of the `.pkg` file.
-3. Double-click the package icon to launch the installation app and follow the prompts.
-4. You might need to enter the administrator password to continue.
-5. After the installation is complete, feel free to delete the `.dmg` file to save space.
+- **RAM**
+  - Minimum: 4 GB  
+  - Direkomendasikan: 8 GB atau lebih
+- **Storage**
+  - Minimum: 8 GB ruang kosong  
+  - Direkomendasikan: 15–20 GB (IDE, SDK, dan Emulator)
+- **CPU**
+  - Mendukung virtualisasi (Intel VT-x / AMD-V) untuk Android Emulator
 
-## Step 2: Install the JDK (for Windows)
+---
 
-1. Run the downloaded installer (for example, `jdk-21_windows-x64_bin.exe`), which installs both the JDK and the JRE. By default, the JDK is installed in `C:\Program Files\Java\jdk-21` directory.
-2. Accept the defaults and follow the on-screen instructions to install the JDK.
+## 🧩 Required Software
 
-## Step 3: Add the JDK Installation Directory to PATH (Windows only)
+- Android Studio (Latest Stable Version)
+- JDK (sudah termasuk di Android Studio)
 
-1. Open **Control Panel > System > Advanced system settings > Environment Variables**.
-2. Under System variables, click **New** and add a variable named `JAVA_HOME` with the JDK's directory as the value. For example, `C:\Program Files\Java\jdk-21`.
-3. Under **System variables**, scroll down to select **Path**, then click **Edit**.
-4. Add the JDK's `bin` directory to the end of the `Path`, preceded by a semicolon. For example, `;C:\Program Files\Java\jdk-21\bin`.
+---
 
-## Step 4: Verify the JDK Installation
+## 🔽 Step 1: Download Android Studio
 
-To verify that the JDK was installed correctly, open a terminal (Command Prompt on Windows or Terminal on Mac) and type the following commands:
-  java
-  java -version
-  javac -version
-Windows users: If you receive an error from either command, confirm you've added the correct paths for the JDK.
+Unduh Android Studio dari situs resmi Android Developer:
 
-## Step 5: Download and Install Android Studio
-1. Download Android Studio from [Android Developer's website](https://developer.android.com/studio).
-2. Follow the installation instructions provided on the website to complete the setup.
-With these steps, you should have a working setup for Android development with the latest tools and updates for 2024.
+https://developer.android.com/studio
+
+Pilih installer sesuai sistem operasi:
+- Windows (`.exe`)
+- macOS (`.dmg`)
+
+---
+
+## 💻 Step 2: Install Android Studio
+
+### Windows
+1. Jalankan file installer `.exe`
+2. Ikuti proses instalasi hingga selesai
+3. Gunakan pengaturan default (direkomendasikan)
+4. Pastikan komponen berikut terpasang:
+   - Android SDK
+   - Android Emulator
+   - Android Virtual Device (AVD)
+
+### macOS
+1. Buka file `.dmg`
+2. Drag **Android Studio** ke folder **Applications**
+3. Jalankan Android Studio
+4. Ikuti Setup Wizard
+
+---
+
+## ⚙️ Step 3: Initial Setup & SDK Configuration
+
+Saat pertama kali menjalankan Android Studio:
+
+1. Pilih **Standard Setup**
+2. Android Studio akan otomatis mengunduh:
+   - Android SDK
+   - Platform Tools
+   - Build Tools
+   - System Image untuk Emulator
+3. Tunggu hingga proses selesai
+
+---
+
+## ☕ Step 4 (Optional): External JDK Configuration
+
+Langkah ini **opsional** dan hanya diperlukan jika:
+- Menggunakan project lama
+- Membutuhkan versi Java tertentu
+
+### Mengatur JDK di Android Studio
+1. Buka **Settings / Preferences**
+2. Masuk ke **Build, Execution, Deployment → Build Tools → Gradle**
+3. Pada **Gradle JDK**, pilih:
+   - **Embedded JDK** (direkomendasikan), atau
+   - JDK eksternal sesuai kebutuhan
+
+---
+
+## ✅ Step 5: Verify Installation
+
+Buka Terminal (macOS) atau Command Prompt (Windows), lalu jalankan:
+
+```bash
+java -version
+javac -version
+```
+
+Jika Android Studio dapat membuat dan menjalankan project tanpa error, instalasi berhasil.
+
+---
+
+## 📱 Optional: Run App Without Emulator
+
+Jika spesifikasi komputer terbatas:
+1. Aktifkan **USB Debugging** di perangkat Android
+2. Hubungkan perangkat ke komputer
+3. Jalankan aplikasi langsung ke device
+
+---
+
+## 🧠 Notes & Best Practices
+
+- Gunakan Android Studio **Stable Channel**
+- Gunakan **Kotlin** sebagai bahasa utama
+- Update SDK melalui **SDK Manager**
+- Gunakan emulator hanya jika diperlukan untuk performa optimal
+
+---
+
+## 🎯 Conclusion
+
+Dengan mengikuti panduan ini, lingkungan pengembangan Android kamu sudah siap menggunakan tool dan standar terbaru.
+
+Happy coding 🚀
